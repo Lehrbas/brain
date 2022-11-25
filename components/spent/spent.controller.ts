@@ -29,7 +29,7 @@ export class SpentController {
   }
 
   async updateSpent(request: Request, response: Response){
-    const { id, type, tag, amount, date } = request.body();
+    const { id, type, tag, amount, date } = request.body;
 
     try {
       await this.spentService.updateSpent({
@@ -51,7 +51,7 @@ export class SpentController {
   }
 
   async findById(request: Request, response: Response) {
-    const { id } = request.body();
+    const { id } = request.body;
 
     try {
       const spent = await this.spentService.findById(id);
@@ -67,7 +67,7 @@ export class SpentController {
   }
 
   async findByTag(request: Request, response: Response) {
-    const { tag } = request.body();
+    const { tag } = request.body;
 
     try {
       const spents: Array<Spent> = await this.spentService.findByTag(tag);
@@ -83,7 +83,7 @@ export class SpentController {
   }
 
   async findByType(request: Request, response: Response) {
-    const { type } = request.body();
+    const { type } = request.body;
 
     try {
       const spents: Array<Spent> = await this.spentService.findByType(type);
