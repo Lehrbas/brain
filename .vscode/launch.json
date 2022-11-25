@@ -1,10 +1,13 @@
 {
   "configurations": [
     {
-      "type": "pwa-chrome",
-      "name": "http://localhost:3000",
-      "request": "launch",
-      "url": "http://localhost:3000"
+      "name": "Docker: Attach to Node",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "address": "localhost",
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "/app"
     }
   ]
 }

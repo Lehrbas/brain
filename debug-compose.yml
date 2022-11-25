@@ -1,0 +1,22 @@
+version: "3.0"
+services:
+  web-server:
+    build:
+      context: .
+      args:
+        NODE_ENV: development
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=development
+      - MONGO_USER=mongo
+      - MONGO_PASSWORD=mongo
+      - MONGO_IP=mongo
+      - MONGO_PORT=27017
+    command: npm run debug-docker

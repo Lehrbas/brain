@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "tsc && node --unhandled-rejections=strict ./dist/bin/www/server.js",
-    "debug": "export DEBUG=* && npm run start",
+    "debug-docker": "tsc && node --unhandled-rejections=strict --inspect-brk=0.0.0.0 ./dist/bin/www/server.js",
+    "debug-local": "export DEBUG=* && npm run start",
     "test": "vitest"
   },
   "author": "",

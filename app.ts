@@ -19,7 +19,6 @@ export default class App {
 
   private iniatializeRouter(router: express.Router) {
     this.app.use(router);
-    console.log(this.app._router.stack[3]);
   }
 
   public listen() {
