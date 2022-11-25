@@ -1,0 +1,34 @@
+{
+  "name": "brain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node --unhandled-rejections=strict ./dist/bin/www/server.js",
+    "debug": "export DEBUG=* && npm run start",
+    "test": "vitest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/debug": "^4.1.7",
+    "@types/express": "^4.17.14",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^18.11.9",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.27.0",
+    "vitest": "^0.25.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2",
+    "typescript": "^4.8.4",
+    "uuid": "^9.0.0"
+  }
+}
